@@ -29,3 +29,10 @@ inline Vector3D operator /(const Vector3D& v, float s);
 
 inline Vector3D operator -(const Vector3D& v);
 
+inline float Magnitude(const Vector3D& v);
+
+inline Vector3D Normalize(const Vector3D& v);
+
+inline float Dot(const Vector3D& a, const Vector3D& b);
+
+inline Vector3D Cross(const Vector3D& a, const Vector3D& b);
