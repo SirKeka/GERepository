@@ -59,3 +59,10 @@ Matrix3D operator *(const Matrix3D& A, const Matrix3D& B)
 			             M(1, 0) * v.x + M(1, 1) * M(1, 2) * v.z,
 			             M(2, 0) * v.x + M(2, 1) * M(2, 2) * v.z));
     }
+
+	float Determinant(const Matrix3D& M)
+	{
+		return (M(0, 0) * (M(1, 1) * M(2, 2) - M(1, 2) * M(2, 1))
+			  + M(0, 1) * (M(1, 2) * M(2, 0) - M(1, 0) * M(2, 2))
+			  + M(0, 2) * (M(1, 0) * M(2, 1) - M(1, 1) * M(2, 0)));
+	}
